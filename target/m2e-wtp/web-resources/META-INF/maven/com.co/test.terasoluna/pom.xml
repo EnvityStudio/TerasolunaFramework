@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.co</groupId>
+	<artifactId>test.terasoluna</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Terasoluna Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<description>Example of TERASOLUNA Framework</description>
+	<properties>
+		<java-version>1.7</java-version>
+	</properties> 
+	<parent>
+		<groupId>org.terasoluna.gfw</groupId>
+		<artifactId>terasoluna-gfw-parent</artifactId>
+		<version>5.5.0.RELEASE</version>
+		<relativePath />
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- == Begin TERASOLUNA == -->
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-common-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-jodatime-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-security-core-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<!-- -->
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-recommended-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-web-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-web-jsp-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-security-web-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.terasoluna.gfw</groupId>
+			<artifactId>terasoluna-gfw-recommended-web-dependencies</artifactId>
+			<type>pom</type>
+		</dependency>
+		<!-- == End TERASOLUNA == -->
+
+		<!-- == Begin Tomcat == -->
+		<!-- Servlet API 3.0 & JSP API 2.2 -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JavaEE/SE APIs -->
+		<!-- Required only for Tomcat. If run on other J2EE server, remove this 
+			dependency and use provided tag libraries. -->
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-jstlel</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-commons -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+		<!-- == Begin Tomcat == -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-el</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Servlet API 3.0 & JSP API 2.2 -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JavaEE/SE APIs -->
+		<!-- Required only for Tomcat. If run on other J2EE server, remove this 
+			dependency and use provided tag libraries. -->
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-jstlel</artifactId>
+		</dependency>
+		<!-- == End Tomcat == -->
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<finalName>test.terasoluna</finalName>
+	</build>
+</project>
